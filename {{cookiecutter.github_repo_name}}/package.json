@@ -7,7 +7,7 @@
     "build": "babel src --out-dir lib",
     "clean": "rimraf lib dist coverage",
     "prepublish": "npm-run-all clean build",
-    "test": "mocha --compilers js:babel-register --recursive ./test/*.spec.js"
+    "test": "mocha"
   },
   "dependencies": {
   },
@@ -18,7 +18,7 @@
     "mocha": "^2.4.5",
     "npm-run-all": "^1.7.0",
     "rimraf": "^2.5.2",
-    "should": "^8.3.0"
+    "should": "^8.3.1"
   },
   "repository": "{{ cookiecutter.github_username }}/{{ cookiecutter.github_repo_name }}",
   "license": "MIT",
