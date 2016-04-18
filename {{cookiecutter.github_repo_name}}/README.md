@@ -5,7 +5,7 @@
 ## Installation
 
 ```
-npm install --save {{ cookiecutter.github_repo_name }}
+npm install {{ cookiecutter.github_repo_name }} --save
 ```
 
 ## Usage
