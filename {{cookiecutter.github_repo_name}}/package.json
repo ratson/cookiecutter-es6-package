@@ -6,20 +6,20 @@
   "scripts": {
     "build": "babel src --out-dir lib",
     "clean": "rimraf lib dist coverage",
-    "lint": "eslint .",
+    "lint": "csc",
     "prepublish": "npm-run-all clean build",
     "test": "ava"
   },
   "dependencies": {},
   "devDependencies": {
-    "ava": "^0.15.2",
-    "babel-cli": "^6.10.1",
-    "babel-eslint": "^6.1.0",
-    "babel-preset-es2015": "^6.9.0",
-    "babel-register": "^6.9.0",
-    "eslint": "^2.13.1",
-    "npm-run-all": "^2.2.2",
-    "rimraf": "^2.5.2"
+    "ava": "^0.16.0",
+    "babel-cli": "^6.16.0",
+    "babel-eslint": "^7.0.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-register": "^6.16.3",
+    "csc": "^0.2.0",
+    "npm-run-all": "^3.1.0",
+    "rimraf": "^2.5.4"
   },
   "repository": "{{ cookiecutter.github_username }}/{{ cookiecutter.github_repo_name }}",
   "license": "MIT",

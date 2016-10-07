@@ -1,9 +1,0 @@
-env:
-  browser: true
-  es6: true
-  node: true
-extends:
-  - eslint:recommended
-parser: babel-eslint
-rules:
-  comma-dangle: [2, "always-multiline"]
