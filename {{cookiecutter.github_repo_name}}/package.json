@@ -1,28 +1,34 @@
 {
   "name": "{{ cookiecutter.github_repo_name }}",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "{{ cookiecutter.description }}",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel src --out-dir lib",
+    "build": "cross-env NODE_ENV=production babel --source-maps --out-dir=lib/ src/",
+    "dev": "cross-env NODE_ENV=development babel --watch --source-maps --out-dir=lib/ src/",
     "clean": "rimraf lib dist coverage",
     "lint": "csc",
+    "posttest": "npm run lint",
     "prepublish": "npm-run-all clean build",
     "test": "ava"
   },
   "dependencies": {},
   "devDependencies": {
-    "ava": "^0.16.0",
-    "babel-cli": "^6.16.0",
-    "babel-eslint": "^7.0.0",
-    "babel-preset-es2015": "^6.16.0",
-    "babel-register": "^6.16.3",
-    "csc": "^0.2.0",
-    "npm-run-all": "^3.1.0",
+    "ava": "^0.17.0",
+    "babel-cli": "^6.18.0",
+    "babel-eslint": "^7.1.1",
+    "babel-preset-env": "^0.0.8",
+    "babel-register": "^6.18.0",
+    "cross-env": "^3.1.3",
+    "csc": "^0.2.2",
+    "npm-run-all": "^3.1.1",
     "rimraf": "^2.5.4"
   },
   "repository": "{{ cookiecutter.github_username }}/{{ cookiecutter.github_repo_name }}",
   "license": "MIT",
+  "engines": {
+    "node": ">=4"
+  },
   "files": [
     "*.md",
     "LICENSE",
