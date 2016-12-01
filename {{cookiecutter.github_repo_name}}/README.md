@@ -11,5 +11,5 @@ npm install {{ cookiecutter.github_repo_name }} --save
 ## Usage
 
 ```js
-import {{ cookiecutter.github_repo_name }} from '{{ cookiecutter.github_repo_name }}'
+import '{{ cookiecutter.github_repo_name }}'
 ```

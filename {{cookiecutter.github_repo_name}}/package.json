@@ -7,8 +7,6 @@
     "build": "cross-env NODE_ENV=production babel --source-maps --out-dir=lib/ src/",
     "dev": "cross-env NODE_ENV=development babel --watch --source-maps --out-dir=lib/ src/",
     "clean": "rimraf lib dist coverage",
-    "lint": "csc",
-    "posttest": "npm run lint",
     "prepublish": "npm-run-all clean build",
     "test": "ava"
   },
@@ -16,12 +14,10 @@
   "devDependencies": {
     "ava": "^0.17.0",
     "babel-cli": "^6.18.0",
-    "babel-eslint": "^7.1.1",
-    "babel-preset-env": "^0.0.8",
+    "babel-preset-env": "^0.0.9",
     "babel-register": "^6.18.0",
     "cross-env": "^3.1.3",
-    "csc": "^0.2.2",
-    "npm-run-all": "^3.1.1",
+    "npm-run-all": "^3.1.2",
     "rimraf": "^2.5.4"
   },
   "repository": "{{ cookiecutter.github_username }}/{{ cookiecutter.github_repo_name }}",
