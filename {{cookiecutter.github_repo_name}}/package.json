@@ -11,10 +11,12 @@
     "pretest": "npm run build",
     "test": "ava"
   },
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "ava": "^0.17.0",
     "babel-cli": "^6.18.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-env": "^0.0.9",
     "babel-register": "^6.18.0",
     "cross-env": "^3.1.3",
