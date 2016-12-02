@@ -8,6 +8,7 @@
     "dev": "cross-env NODE_ENV=development babel --watch --source-maps --out-dir=lib/ src/",
     "clean": "rimraf lib dist coverage",
     "prepublish": "npm-run-all clean build",
+    "pretest": "npm run build",
     "test": "ava"
   },
   "dependencies": {},
