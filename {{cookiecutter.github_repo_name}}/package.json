@@ -7,7 +7,7 @@
     "build": "cross-env NODE_ENV=production babel --source-maps --out-dir=lib/ src/",
     "dev": "cross-env NODE_ENV=development babel --watch --source-maps --out-dir=lib/ src/",
     "clean": "rimraf lib dist coverage",
-    "prepublish": "npm-run-all clean build",
+    "prepublish": "run-s clean build",
     "pretest": "npm run build",
     "test": "ava"
   },
@@ -17,7 +17,7 @@
     "ava": "^0.17.0",
     "babel-cli": "^6.18.0",
     "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-preset-env": "^0.0.9",
+    "babel-preset-env": "^1.1.4",
     "babel-register": "^6.18.0",
     "cross-env": "^3.1.3",
     "npm-run-all": "^3.1.2",
