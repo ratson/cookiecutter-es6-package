@@ -15,17 +15,17 @@
   "dependencies": {
   },
   "devDependencies": {
-    "ava": "^0.17.0",
-    "babel-cli": "^6.18.0",
+    "ava": "^0.18.2",
+    "babel-cli": "^6.23.0",
     "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-preset-env": "^1.1.8",
-    "babel-register": "^6.18.0",
-    "cross-env": "^3.1.4",
-    "eslint": "^3.13.1",
+    "babel-preset-env": "^1.2.0",
+    "babel-register": "^6.23.0",
+    "cross-env": "^3.2.3",
+    "eslint": "^3.17.0",
     "eslint-config-concise": "^0.6.1",
     "eslint-config-concise-esnext": "^0.6.0",
-    "npm-run-all": "^4.0.0",
-    "rimraf": "^2.5.4"
+    "npm-run-all": "^4.0.2",
+    "rimraf": "^2.6.1"
   },
   "repository": "{{ cookiecutter.github_username }}/{{ cookiecutter.github_repo_name }}",
   "license": "MIT",
