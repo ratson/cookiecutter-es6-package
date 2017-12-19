@@ -1,3 +1,4 @@
 extends:
   - concise
   - concise-esnext
+  - concise-jest

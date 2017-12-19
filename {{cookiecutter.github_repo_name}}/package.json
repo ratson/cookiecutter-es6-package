@@ -6,26 +6,33 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production babel --source-maps --out-dir=lib/ src/",
     "dev": "cross-env NODE_ENV=development babel --watch --source-maps --out-dir=lib/ src/",
-    "clean": "rimraf lib dist coverage",
+    "clean": "del lib dist coverage",
     "prepublish": "run-s clean build",
-    "lint": "eslint --ext js --ext md .",
+    "lint": "eslint --ext js,md .",
+    "size": "size-limit",
     "pretest": "npm run build",
-    "test": "ava"
+    "test": "run-p test:* lint",
+    "test:jest": "jest",
+    "test:size": "run-s build size",
+    "precommit": "lint-staged"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "ava": "^0.19.1",
-    "babel-cli": "^6.24.1",
+    "babel-cli": "^6.26.0",
     "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-preset-env": "^1.4.0",
-    "babel-register": "^6.24.1",
-    "cross-env": "^4.0.0",
-    "eslint": "^3.19.0",
-    "eslint-config-concise": "^0.6.1",
-    "eslint-config-concise-esnext": "^0.6.0",
-    "npm-run-all": "^4.0.2",
-    "rimraf": "^2.6.1"
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "cross-env": "^5.1.1",
+    "del-cli": "^1.1.0",
+    "eslint": "^4.13.1",
+    "eslint-config-concise": "^0.16.1",
+    "eslint-config-concise-esnext": "^0.16.1",
+    "eslint-config-concise-jest": "^0.16.1",
+    "husky": "^0.14.3",
+    "jest": "^22.0.2",
+    "lint-staged": "^6.0.0",
+    "npm-run-all": "^4.1.2",
+    "size-limit": "^0.13.2"
   },
   "repository": "{{ cookiecutter.github_username }}/{{ cookiecutter.github_repo_name }}",
   "license": "MIT",
@@ -37,5 +44,17 @@
     "LICENSE",
     "lib",
     "src"
+  ],
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "size-limit": [
+    {
+      "path": "lib/index.js",
+      "limit": "1 KB"
+    }
   ]
 }
