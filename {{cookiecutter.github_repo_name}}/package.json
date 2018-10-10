@@ -30,6 +30,7 @@
     "eslint-config-concise-jest": "^0.16.1",
     "husky": "^0.14.3",
     "jest": "^22.0.2",
+    "jsdom": "^11.11.0",
     "lint-staged": "^6.0.0",
     "npm-run-all": "^4.1.2",
     "size-limit": "^0.13.2"
@@ -56,5 +57,8 @@
       "path": "lib/index.js",
       "limit": "1 KB"
     }
-  ]
+  ],
+  "jest": {
+    "testUrl": "http://localhost/"
+  }
 }
